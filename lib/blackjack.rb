@@ -1,5 +1,5 @@
 def welcome
-  puts "Welcome to the Blackjack Table" 
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
@@ -19,14 +19,14 @@ def get_user_input
 end
 
 def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!" 
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
   card_one = deal_card
   card_two = deal_card
   card_total = card_one + card_two
-  display_card_total(card_total) #once you have figured out the sum of your two cards, 
+  display_card_total(card_total) #once you have figured out the sum of your two cards,
   #you can pass the total in as an argumnt so your phrase is displayed.
   return card_total
 end
