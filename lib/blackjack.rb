@@ -40,7 +40,7 @@ def hit?(card_total)
     #number given by dealing another card
   elsif user_input == "s"
     card_total #return the number and prompt user to hit again
-  else 
+  else
     invalid_command
   end
 end
