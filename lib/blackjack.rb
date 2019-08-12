@@ -1,12 +1,12 @@
 def welcome
-  puts "Welcome to the Blackjack Table"
+  puts "Welcome to the Blackjack Table" 
 end
 
 def deal_card
-  card = rand(1..11) #reuse the randomize method by setting it equal to a variable
+  card = rand(1..11) #use the random method by setting it equal to a variable
 end
 
-def display_card_total(card_total)
+def display_card_total(card_total) #use card_total as argumnt
   puts "Your cards add up to #{card_total}"
 end
 
@@ -15,18 +15,19 @@ def prompt_user
 end
 
 def get_user_input
-  user_input = gets.chomp
+  user_input = gets.chomp #set the user_input to = gets.chomp
 end
 
 def end_game(card_total)
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  puts "Sorry, you hit #{card_total}. Thanks for playing!" 
 end
 
 def initial_round
   card_one = deal_card
   card_two = deal_card
   card_total = card_one + card_two
-  display_card_total(card_total) #once you have figured out the sum of your two cards, you can pass the total in as an argumnt so your phrase is displayed.
+  display_card_total(card_total) #once you have figured out the sum of your two cards, 
+  #you can pass the total in as an argumnt so your phrase is displayed.
   return card_total
 end
 
