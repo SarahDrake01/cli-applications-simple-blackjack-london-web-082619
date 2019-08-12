@@ -3,10 +3,10 @@ def welcome
 end
 
 def deal_card
-  card = rand(1..11) #use the random method by setting it equal to a variable
+  card = rand(1..11) #reuse the randomize method by setting it equal to a variable
 end
 
-def display_card_total(card_total) #use card_total as argumnt
+def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
 end
 
@@ -15,7 +15,7 @@ def prompt_user
 end
 
 def get_user_input
-  user_input = gets.chomp #set the user_input to = gets.chomp
+  user_input = gets.chomp
 end
 
 def end_game(card_total)
@@ -26,8 +26,7 @@ def initial_round
   card_one = deal_card
   card_two = deal_card
   card_total = card_one + card_two
-  display_card_total(card_total) #once you have figured out the sum of your two cards,
-  #you can pass the total in as an argumnt so your phrase is displayed.
+  display_card_total(card_total) #once you have figured out the sum of your two cards, you can pass the total in as an argumnt so your phrase is displayed.
   return card_total
 end
 
@@ -45,15 +44,17 @@ end
 
 def invalid_command
   puts "Please enter a valid command"
-  user_input
+  prompt_user
   get_user_input
 end
+
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
 
 def runner
   welcome #introduce the game
+  sleep 0.75
   card_total = initial_round #determine your current total & tell user what number they currently have
   until card_total > 21 #continue game until user loses
     card_total = hit?(card_total)
@@ -62,4 +63,4 @@ def runner
   end_game(card_total) #prints out once user has lost
 end
 
-runner
+runner 
